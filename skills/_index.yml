@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: generated
+source: https://api-docs.despegar.com/ (operationIds grounded in the public API reference slugs)
+skills:
+- file: despegarcom-hotel-search-and-book.md
+  name: Search and book a hotel with the Despegar B2B API
+  api: https://api.despegar.com/v3
+  operations: [searchAvailability, getHotelAvailability, createPrebook, getPaymentOptions, createBooking, getReservation]
+- file: despegarcom-flight-search-and-book.md
+  name: Search and book a flight with the Despegar B2B API
+  api: https://api.despegar.com/v3
+  operations: [searchFlightsAvailability, createPrebook, getPaymentOptions, createBooking, getReservation]
+- file: despegarcom-cancel-reservation.md
+  name: Cancel a Despegar reservation (after-sales)
+  api: https://api.despegar.com/v3
+  operations: [getReservationStatus, getCancelAllowance, createCancelQuote, cancelReservation]

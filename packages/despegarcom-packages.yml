@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  Registry searches (npm, PyPI, Packagist) + GitHub. Despegar publishes no
+  official client SDK for the B2B travel API; a community client exists.
+github_org: https://github.com/despegar
+notes: >-
+  The github.com/despegar org (72 public repos) hosts Despegar's open-source
+  infrastructure projects (e.g. Khronus metrics), not a first-party B2B API
+  client library. No official B2B API SDK was found on npm, PyPI, Maven Central,
+  NuGet, RubyGems, Packagist or crates.io. Because no official client library
+  exists, no `SDKs` pointer is emitted.
+packages:
+- language: php
+  registry: github
+  name: despegar-api-client
+  url: https://github.com/desarrollo-cooperativo/despegar-api-client
+  official: false
+  note: community-maintained client, not first-party

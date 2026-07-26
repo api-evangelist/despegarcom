@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: https://api-docs.despegar.com/docs/general-information.md
+versioning:
+  scheme: uri-path
+  current: v3
+  docs: https://api-docs.despegar.com/docs/general-information
+environments:
+  production: https://api.despegar.com/v3
+  uat: https://apis-uat.despegar.com/v3
+  development: https://api-dev.despegar.com/v3
+certification:
+  detail: >-
+    Partners must certify their connection (provide evidence of how hotel /
+    flight / activity information is displayed) before going live.
+  docs: https://api-docs.despegar.com/docs/ecosystem
+deprecation:
+  policy_url: null
+  note: no public deprecation / sunset-header policy found
+status_page: null
+sla:
+  url: null
+  note: no public SLA / uptime target found
+deprecated_operations: []

@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://api-docs.despegar.com/docs/security-scheme.md
+standards:
+- id: oauth2
+  conforms: true
+  evidence: hosted MCP servers use OAuth 2.0 client_credentials
+- id: mutual-tls
+  conforms: true
+  evidence: Security API documents mTLS (Mutual TLS) for B2B transactions
+- id: api-key
+  conforms: true
+  evidence: per-partner API key auth on all B2B REST endpoints
+- id: mcp
+  conforms: true
+  evidence: official hosted MCP servers (flights + hotels) over JSON-RPC HTTP
+- id: webhooks
+  conforms: true
+  evidence: push-model event notifications (Communication API)
+- id: rfc9116-security-txt
+  conforms: true
+  evidence: /.well-known/security.txt published with Contact + Bugcrowd BBP
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no public spec confirming application/problem+json

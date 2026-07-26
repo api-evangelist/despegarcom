@@ -1,0 +1,40 @@
+generated: '2026-07-18'
+method: searched
+source: https://api-docs.despegar.com/docs/general-information.md
+docs: https://api-docs.despegar.com/docs/general-information
+authentication:
+  style: api-key
+  detail: per-partner API key (header); separate keys per environment
+  ref: authentication/despegarcom-authentication.yml
+environments:
+  scheme: separate base hosts + separate API keys per environment
+  hosts:
+    production: https://api.despegar.com/v3
+    uat: https://apis-uat.despegar.com/v3
+    development: https://api-dev.despegar.com/v3
+  note: >-
+    "There are specific API Keys for the test environment and production." The
+    active API key must match the environment being called.
+versioning:
+  style: uri-path
+  current: v3
+  detail: version is carried in the base path (/v3)
+booking_flow:
+  detail: >-
+    Stateful multi-step booking — prebook returns a prebook_id that is carried
+    forward into payment and book steps (see errors/ and skills/).
+  ref: https://api-docs.despegar.com/docs/booking-process
+events:
+  style: webhooks (push model; client enables a webhook)
+  ref: asyncapi/despegarcom-communication-webhooks.yml
+idempotency:
+  documented: false
+  note: >-
+    No idempotency-key header or contract is documented in the public B2B docs;
+    not asserted here. (No Idempotency pointer emitted.)
+pagination:
+  documented: false
+  note: not described in the public general-information docs
+rate_limiting:
+  documented: false
+  note: not described in the public general-information docs

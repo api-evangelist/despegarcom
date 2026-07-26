@@ -1,8 +1,29 @@
 aid: despegarcom
 name: Despegar.com
-description: 'Despegar.com is a company surfaced as a portfolio company of insight-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Despegar.com (NYSE: DESP) is the leading online travel company in Latin
+  America, operating the consumer brands Despegar and Decolar alongside the B2B
+  HotelDo / BestDay distribution network. Its B2B travel API lets partners
+  integrate hotels, flights and activities into their own systems, covering the
+  full search, prebook, payment, booking and after-sales (cancellation,
+  rescheduling, special requests) flows, plus geographic and static-content
+  services, push-based event webhooks, a Rewards loyalty API, and an mTLS
+  Security API for B2B transactions. Despegar also publishes official hosted MCP
+  servers for agent-based flight and hotel search, and an llms.txt index of its
+  developer documentation.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://files.readme.io/45785f4-brandmark-blue.svg
 url: https://raw.githubusercontent.com/api-evangelist/despegarcom/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +33,46 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Consumer
-apis: []
+- Travel
+- Hotels
+- Flights
+- Activities
+- Booking
+- Latin America
+- B2B
+- MCP
+- Webhooks
+apis:
+- name: Despegar B2B Hotels API
+  description: Hotel search, live availability, prebook, payment, booking and static content.
+  humanURL: https://api-docs.despegar.com/docs/hotels
+  baseURL: https://api.despegar.com/v3
+  properties:
+  - type: APIReference
+    url: https://api-docs.despegar.com/reference/searchavailability-1
+- name: Despegar B2B Flights API
+  description: Flight search, prebook, payment, ticket issuing and after-sales.
+  humanURL: https://api-docs.despegar.com/docs/flight
+  baseURL: https://api.despegar.com/v3
+  properties:
+  - type: APIReference
+    url: https://api-docs.despegar.com/reference/searchflightsavailability-1
+- name: Despegar B2B Activities API
+  description: Search and purchase of tours and activities (tickets).
+  humanURL: https://api-docs.despegar.com/docs/activities
+  baseURL: https://api.despegar.com/v3
+- name: Despegar After-Sales API
+  description: Post-sale cancellation, rescheduling and special-request flows.
+  humanURL: https://api-docs.despegar.com/docs/aftersales
+  baseURL: https://api.despegar.com/v3
+- name: Despegar Common Assets API
+  description: Geographic data and static content (cities, countries, airports, hotel inventory, amenities).
+  humanURL: https://api-docs.despegar.com/docs/geo
+  baseURL: https://api.despegar.com/v3
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +81,54 @@ maintainers:
 common:
 - type: Website
   url: http://www.despegar.com/
+- type: DeveloperPortal
+  url: https://dev.despegar.com/
+- type: Documentation
+  url: https://api-docs.despegar.com/docs/ecosystem
+- type: APIReference
+  url: https://api-docs.despegar.com/reference/createprebook-1
+- type: GettingStarted
+  url: https://api-docs.despegar.com/docs/ecosystem
+- type: Support
+  url: https://api-docs.despegar.com/docs/support
+- type: GitHubOrganization
+  url: https://github.com/despegar
+- type: LLMsTxt
+  url: llms/despegarcom-llms.txt
+- type: MCPServer
+  url: mcp/despegarcom-mcp.yml
+- type: Authentication
+  url: authentication/despegarcom-authentication.yml
+- type: Conventions
+  url: conventions/despegarcom-conventions.yml
+- type: Lifecycle
+  url: lifecycle/despegarcom-lifecycle.yml
+- type: Sandbox
+  url: sandbox/despegarcom-sandbox.yml
+- type: Webhooks
+  url: asyncapi/despegarcom-communication-webhooks.yml
+- type: Conformance
+  url: conformance/despegarcom-conformance.yml
+- type: Packages
+  url: packages/despegarcom-packages.yml
+- type: WellKnown
+  url: well-known/despegarcom-well-known.yml
+- type: SecurityTxt
+  url: well-known/despegarcom-security.txt
+- type: VulnerabilityDisclosure
+  url: security/despegarcom-vulnerability-disclosure.yml
+- type: Security
+  url: security/despegarcom-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/despegarcom-domain-security.yml
+- type: AgentSkill
+  url: skills/despegarcom-hotel-search-and-book.md
+- type: AgentSkill
+  url: skills/despegarcom-flight-search-and-book.md
+- type: AgentSkill
+  url: skills/despegarcom-cancel-reservation.md
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

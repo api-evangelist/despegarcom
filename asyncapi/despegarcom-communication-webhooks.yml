@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: searched
+source: https://api-docs.despegar.com/docs/comunication.md
+docs: https://api-docs.despegar.com/docs/comunication
+spec_type: Webhooks
+delivery:
+  model: push
+  detail: >-
+    "Operates on a push model, which requires clients to enable a webhook."
+    Delivery protocol, subscription mechanism, retry logic and callback
+    authentication are not detailed in the public docs.
+events:
+  refund:
+  - Refund confirmation manual coupon
+  - Refund Confirmation
+  - Refund Information
+  - Refund rejected chargeback
+  after_sales:
+  - Rescheduling minor eticket
+  - Rescheduling notification
+  - Rescheduling reminder
+  - Change flight manual
+  - eTicket PostSale
+  - Thanks change flight
+  - Rejected credit card mid
+  - Begin cancel
+  - Finalize cancel
+  checkout:
+  - ffReservationDelayed
+  - ffFinishedOk
+  trip:
+  - Flight web checkin
+  other:
+  - Snowden airline

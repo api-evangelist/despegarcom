@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: https://api-docs.despegar.com/docs/general-information.md
+test_live_separation:
+  model: separate environments with separate API keys
+  detail: >-
+    "There are specific API Keys for the test environment and production." The
+    API key used must be active and must match the target environment.
+environments:
+  test_uat:
+    base_url: https://apis-uat.despegar.com/v3
+    credentials: per-partner test API key
+  development:
+    base_url: https://api-dev.despegar.com/v3
+    credentials: per-partner test API key
+  production:
+    base_url: https://api.despegar.com/v3
+    credentials: per-partner production API key
+mcp_sandbox:
+  detail: >-
+    Sandbox credentials for the hosted MCP servers are provisioned by the
+    Despegar account manager (not self-service).
+  source: https://api-docs.despegar.com/docs/mcp-support
+test_values:
+  note: >-
+    Despegar does not publish verbatim magic test identifiers (test card
+    numbers, test IBANs, etc.) in the public B2B docs; test data is provisioned
+    per partner. None are recorded here (no fabrication).
