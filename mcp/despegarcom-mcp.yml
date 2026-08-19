@@ -2,12 +2,10 @@ generated: '2026-07-18'
 method: searched
 status: published
 source: https://api-docs.despegar.com/docs/mcp-support.md
-description: >-
-  Despegar publishes official hosted MCP (Model Context Protocol) servers for
-  its B2B travel API, exposing flight and hotel search/cart tools over JSON-RPC
-  HTTP. Authentication is handled server-side via OAuth 2.0 client_credentials;
-  partner credentials are never exposed to the model. Sandbox credentials are
-  provisioned by the Despegar account manager.
+description: Despegar publishes official hosted MCP (Model Context Protocol) servers for its B2B travel
+  API, exposing flight and hotel search/cart tools over JSON-RPC HTTP. Authentication is handled server-side
+  via OAuth 2.0 client_credentials; partner credentials are never exposed to the model. Sandbox credentials
+  are provisioned by the Despegar account manager.
 auth:
   type: oauth2
   flow: client_credentials
@@ -35,3 +33,10 @@ servers:
     description: Check availability for a hotel
   - name: hotels_create_cart
     description: Create a hotel cart
+deployment:
+  mode: remote
+  endpoint: https://apis.despegar.com/api-b2b-flights-mcp/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
