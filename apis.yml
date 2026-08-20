@@ -45,6 +45,18 @@ tags:
 - Latin America
 - B2B
 - MCP
+- Webhook
+tags_raw:
+- Company
+- Consumer
+- Travel
+- Hotels
+- Flights
+- Activities
+- Booking
+- Latin America
+- B2B
+- MCP
 - Webhooks
 apis:
 - name: Despegar B2B Hotels API
