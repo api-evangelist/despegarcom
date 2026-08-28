@@ -11,6 +11,17 @@ description: >-
   Security API for B2B transactions. Despegar also publishes official hosted MCP
   servers for agent-based flight and hotel search, and an llms.txt index of its
   developer documentation.
+deliveryModel:
+  model: library
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Library · distributed through package registries, no callable service
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
